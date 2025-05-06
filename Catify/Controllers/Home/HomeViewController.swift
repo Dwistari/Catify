@@ -12,6 +12,7 @@ import UIKit
 class HomeViewController: BaseViewController {
 
     @IBOutlet weak var btnFilter: UIButton!
+    @IBOutlet weak var btnFavorite: UIButton!
     @IBOutlet weak var tableView: UITableView!
   
     private let viewModel = HomeViewModel()
@@ -22,18 +23,22 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupView()
         bindViewModel()
         loadData()
     }
 
-    private func setupTableView() {
+    private func setupView() {
         self.title = "Home"
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
         let nib = UINib(nibName: "CatViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CatViewCell")
+        
+        btnFavorite.layer.borderWidth = 1
+        btnFavorite.layer.borderColor = UIColor.gray.cgColor
+        btnFavorite.layer.cornerRadius = 8
     }
     
     
@@ -70,6 +75,12 @@ class HomeViewController: BaseViewController {
     }
     
     
+    @IBAction func chooseFav(_ sender: Any) {
+        let vc = FavoriteViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     @IBAction func chooseFilter(_ sender: Any) {
         let filterVC = BreedFilterViewController(nibName: "BreedFilterViewController", bundle: nil)
         filterVC.breeds =  self.breeds
@@ -99,9 +110,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cat =  cats[indexPath.row]
         let isFavorited = favoriteCats.contains { $0.id == cat.id }
-        
-        print("isFavorited",isFavorited )
-
         let imageName = isFavorited ? "heart.fill" : "heart"
         cell.favoriteBtn.setImage(UIImage(systemName: imageName), for: .normal)
         
@@ -141,10 +149,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.viewModel.page += 1
                 self.viewModel.fetchCats()
                 self.viewModel.onSuccessFetchCats = { [weak self] in
+                    guard let self = self else {return}
                     DispatchQueue.main.async {
-                        self?.isLoading = false
-                        self?.tableView.tableFooterView = nil
-                        self?.tableView.reloadData()
+                        self.cats = self.viewModel.cats
+                        self.isLoading = false
+                        self.tableView.tableFooterView = nil
+                        self.tableView.reloadData()
                     }
                 }
             }

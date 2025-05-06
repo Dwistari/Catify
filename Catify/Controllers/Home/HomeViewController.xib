@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Catify" customModuleProvider="target">
             <connections>
+                <outlet property="btnFavorite" destination="l9K-u0-7cW" id="l9v-FM-c9E"/>
                 <outlet property="btnFilter" destination="qNo-99-ZZa" id="x5u-qe-f7D"/>
                 <outlet property="tableView" destination="dCI-cy-0O1" id="AxS-IJ-WOj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -36,24 +37,31 @@
                         <action selector="chooseFilter:" destination="-1" eventType="touchUpInside" id="sEC-vM-NEA"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-1O-JTy">
-                    <rect key="frame" x="32" y="84.666666666666671" width="108" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9K-u0-7cW">
+                    <rect key="frame" x="16" y="77.666666666666671" width="85" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="zo5-Cc-4Kh"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Favorite"/>
+                    <connections>
+                        <action selector="chooseFav:" destination="-1" eventType="touchUpInside" id="DpF-mf-l7W"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="tfO-1O-JTy" firstAttribute="leading" secondItem="dCI-cy-0O1" secondAttribute="leading" constant="16" id="5OU-12-6qt"/>
+                <constraint firstItem="l9K-u0-7cW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5bu-zC-Acb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dCI-cy-0O1" secondAttribute="bottom" constant="16" id="8G8-as-HR5"/>
                 <constraint firstItem="dCI-cy-0O1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="EeO-q4-9P3"/>
                 <constraint firstItem="qNo-99-ZZa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Joe-YV-Tih"/>
+                <constraint firstItem="l9K-u0-7cW" firstAttribute="centerY" secondItem="qNo-99-ZZa" secondAttribute="centerY" id="TfW-Kq-gyS"/>
                 <constraint firstItem="dCI-cy-0O1" firstAttribute="top" secondItem="qNo-99-ZZa" secondAttribute="bottom" constant="16" id="Zcj-Pd-gK3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qNo-99-ZZa" secondAttribute="trailing" constant="16" id="fNS-RF-hZf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dCI-cy-0O1" secondAttribute="trailing" constant="16" id="rlN-oz-3l5"/>
-                <constraint firstItem="tfO-1O-JTy" firstAttribute="centerY" secondItem="qNo-99-ZZa" secondAttribute="centerY" id="xZI-J2-CoC"/>
             </constraints>
             <point key="canvasLocation" x="75.572519083969468" y="20.422535211267608"/>
         </view>

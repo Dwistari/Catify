@@ -31,9 +31,14 @@ class HomeViewModel {
             case .success(let cats):
                 if self.page > 0 {
                     self.cats.append(contentsOf: cats)
+                    print("self.cats1",self.cats.count)
+
                 } else {
                     self.cats = cats
+                    print("self.cats2",self.cats.count)
+
                 }
+                
                 self.onSuccessFetchCats?()
             case .failure(let error):
                 self.onError?(error.localizedDescription)

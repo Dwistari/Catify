@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DD3CD6BD2DC9CC8900CB0285 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3CD6BC2DC9CC8900CB0285 /* Favorites.swift */; };
+		DD696C5B2DC9DFE2007B3478 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD696C5A2DC9DFE2007B3478 /* FavoriteViewController.xib */; };
+		DD696C5C2DC9DFE2007B3478 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD696C592DC9DFE2007B3478 /* FavoriteViewController.swift */; };
 		DD8B118C2DC8E08E00551D57 /* BreedFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8B118B2DC8E08E00551D57 /* BreedFilterViewController.xib */; };
 		DD8B118D2DC8E08E00551D57 /* BreedFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B118A2DC8E08E00551D57 /* BreedFilterViewController.swift */; };
 		DD8B118F2DC8E27500551D57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B118E2DC8E27500551D57 /* BaseViewController.swift */; };
@@ -64,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		DD3CD6BC2DC9CC8900CB0285 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		DD696C592DC9DFE2007B3478 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		DD696C5A2DC9DFE2007B3478 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		DD8B118A2DC8E08E00551D57 /* BreedFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedFilterViewController.swift; sourceTree = "<group>"; };
 		DD8B118B2DC8E08E00551D57 /* BreedFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedFilterViewController.xib; sourceTree = "<group>"; };
 		DD8B118E2DC8E27500551D57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 				DD8B118A2DC8E08E00551D57 /* BreedFilterViewController.swift */,
 				DD8B118B2DC8E08E00551D57 /* BreedFilterViewController.xib */,
 				DD8B118E2DC8E27500551D57 /* BaseViewController.swift */,
+				DD696C592DC9DFE2007B3478 /* FavoriteViewController.swift */,
+				DD696C5A2DC9DFE2007B3478 /* FavoriteViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 				DDD974832DC8A8C200C179F5 /* Base in Resources */,
 				DDD974B62DC8AA0200C179F5 /* SplashViewController.xib in Resources */,
 				DDD974C32DC8AB7300C179F5 /* HomeViewController.xib in Resources */,
+				DD696C5B2DC9DFE2007B3478 /* FavoriteViewController.xib in Resources */,
 				DD8B11922DC8E99A00551D57 /* DetailViewController.xib in Resources */,
 				DDD974BF2DC8AAC700C179F5 /* RegisterViewController.xib in Resources */,
 				DD8B118C2DC8E08E00551D57 /* BreedFilterViewController.xib in Resources */,
@@ -448,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD696C5C2DC9DFE2007B3478 /* FavoriteViewController.swift in Sources */,
 				DDD974802DC8A8C200C179F5 /* ViewController.swift in Sources */,
 				DDD9747C2DC8A8C200C179F5 /* AppDelegate.swift in Sources */,
 				DDD974E02DC8B84000C179F5 /* Cat.swift in Sources */,
