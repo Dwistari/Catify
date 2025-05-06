@@ -11,14 +11,14 @@ class SessionManager {
     static let shared = SessionManager()
     
     var isLoggedIn: Bool {
-        return UserDefaults.standard.string(forKey: "loggedInUserEmail") != nil
+        return UserDefaults.standard.string(forKey: "loggedInUsername") != nil
     }
     
-    func login(email: String) {
-        UserDefaults.standard.set(email, forKey: "loggedInUserEmail")
+    func login(username: String) {
+        UserDefaults.standard.set(username, forKey: "loggedInUsername")
     }
 
     func logout() {
-        UserDefaults.standard.removeObject(forKey: "loggedInUserEmail")
+        UserDefaults.standard.removeObject(forKey: "loggedInUsername")
     }
 }

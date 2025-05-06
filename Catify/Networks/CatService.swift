@@ -13,10 +13,6 @@ protocol CatServiceProtocol {
     func fetchCats(page: Int, breed: String, completion: @escaping (Result<[Cat], AFError>) -> Void) 
     func fetchBreeds(completion: @escaping (Result<[Breed], AFError>) -> Void)
     func fetchDetail(id: String, completion: @escaping (Result<Cat, AFError>) -> Void)
-    
-    func fetchFavorite(id: String, completion: @escaping (Result<Favorite, AFError>) -> Void)
-    func addFavorite(id: String, completion: @escaping (Result<FavoriteResponse, AFError>) -> Void)
-    func removeFavorite(id: String, completion: @escaping (Result<String, AFError>) -> Void)
 }
 
 class CatService: CatServiceProtocol {
@@ -64,27 +60,5 @@ class CatService: CatServiceProtocol {
         }  
         
         print("🐱 Full URL-----: \(url)")
-    }
-    
-    func fetchFavorite(id: String, completion: @escaping (Result<Favorite, AFError>) -> Void) {
-        //
-    }
-    
-    func addFavorite(id: String, completion: @escaping (Result<FavoriteResponse, AFError>) -> Void) {
-        let body = FavoriteRequestBody(imageID: id, subID: "my-user-1234")
-        let headers: HTTPHeaders = [  "x-api-key": apiKey  ]
-        
-        AF.request(Endpoints.Cats.favorite,
-                   method: .post,
-                   parameters: body,
-                   encoder: JSONParameterEncoder.default,
-                   headers: headers)
-            .responseDecodable(of: FavoriteResponse.self) { response in
-                completion(response.result)
-            }
-    }
-    
-    func removeFavorite(id: String, completion: @escaping (Result<String, AFError>) -> Void) {
-        //
     }
 }

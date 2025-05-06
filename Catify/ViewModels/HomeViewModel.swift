@@ -53,17 +53,6 @@ class HomeViewModel {
         }
     }
     
-//    func addFavorite(id: String) {
-//        service.addFavorite(id: id) { [weak self] result in
-//            switch result {
-//            case .success(let cats):
-//                self?.onSuccessAddfavorite?()
-//            case .failure(let error):
-//                self?.onError?(error.localizedDescription)
-//            }
-//        }
-//    }
-    
     func filterByBreed(breed: String) {
         selectedBreed = breed
         page = 0

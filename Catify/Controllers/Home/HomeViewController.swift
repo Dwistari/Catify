@@ -66,8 +66,7 @@ class HomeViewController: BaseViewController {
             self.hideLoading()
             print("Error: \(errorMessage)")
         }
-        
-//        favoriteCats = CoreDataManager.shared.fetchFavorites()
+        favoriteCats = CoreDataManager.shared.fetchFavorites()
     }
     
     
@@ -99,17 +98,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let cat =  cats[indexPath.row]
-//        let favorite =  favoriteCats[indexPath.row]
-//        let isFavorited = favoriteCats.contains { $0.id == cat.id }
-//
-//        let imageName = isFavorited ? "heart.fill" : "heart"
-//        cell.favoriteBtn.setImage(UIImage(systemName: imageName), for: .normal)
+        let isFavorited = favoriteCats.contains { $0.id == cat.id }
+        
+        print("isFavorited",isFavorited )
+
+        let imageName = isFavorited ? "heart.fill" : "heart"
+        cell.favoriteBtn.setImage(UIImage(systemName: imageName), for: .normal)
         
         cell.setupCell(cat: cat)
         cell.onTapFavorite = { [weak self] in
             guard let self = self else { return }
+            CoreDataManager.shared.saveFavorite(isFavorite: !isFavorited, cat: cat)
+            
+            // Refresh favorites and reload cell
+            self.favoriteCats = CoreDataManager.shared.fetchFavorites()
             self.tableView.reloadData()
-//            self.addFavorite(imgId: viewModel.cats[indexPath.row].id)
         }
         return cell
     }
