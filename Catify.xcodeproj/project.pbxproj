@@ -18,7 +18,6 @@
 		DD8B11952DC8EB2A00551D57 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B11942DC8EB2A00551D57 /* DetailViewModel.swift */; };
 		DDD9747C2DC8A8C200C179F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9747B2DC8A8C200C179F5 /* AppDelegate.swift */; };
 		DDD9747E2DC8A8C200C179F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9747D2DC8A8C200C179F5 /* SceneDelegate.swift */; };
-		DDD974802DC8A8C200C179F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9747F2DC8A8C200C179F5 /* ViewController.swift */; };
 		DDD974832DC8A8C200C179F5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DDD974822DC8A8C200C179F5 /* Base */; };
 		DDD974852DC8A8C300C179F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD974842DC8A8C300C179F5 /* Assets.xcassets */; };
 		DDD974882DC8A8C300C179F5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DDD974872DC8A8C300C179F5 /* Base */; };
@@ -26,7 +25,6 @@
 		DDD9749D2DC8A8C300C179F5 /* CatifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9749C2DC8A8C300C179F5 /* CatifyUITests.swift */; };
 		DDD9749F2DC8A8C300C179F5 /* CatifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9749E2DC8A8C300C179F5 /* CatifyUITestsLaunchTests.swift */; };
 		DDD974B52DC8AA0200C179F5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974B32DC8AA0200C179F5 /* SplashViewController.swift */; };
-		DDD974B62DC8AA0200C179F5 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD974B42DC8AA0200C179F5 /* SplashViewController.xib */; };
 		DDD974BA2DC8AAB900C179F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974B82DC8AAB900C179F5 /* LoginViewController.swift */; };
 		DDD974BB2DC8AAB900C179F5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD974B92DC8AAB900C179F5 /* LoginViewController.xib */; };
 		DDD974BE2DC8AAC700C179F5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974BC2DC8AAC700C179F5 /* RegisterViewController.swift */; };
@@ -77,7 +75,6 @@
 		DDD974782DC8A8C200C179F5 /* Catify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD9747B2DC8A8C200C179F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDD9747D2DC8A8C200C179F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDD9747F2DC8A8C200C179F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDD974822DC8A8C200C179F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDD974842DC8A8C300C179F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDD974872DC8A8C300C179F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,7 +85,6 @@
 		DDD9749C2DC8A8C300C179F5 /* CatifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatifyUITests.swift; sourceTree = "<group>"; };
 		DDD9749E2DC8A8C300C179F5 /* CatifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DDD974B32DC8AA0200C179F5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		DDD974B42DC8AA0200C179F5 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		DDD974B82DC8AAB900C179F5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DDD974B92DC8AAB900C179F5 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		DDD974BC2DC8AAC700C179F5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +139,24 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		DDB0A3542DC9E72C003453A9 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				DD8B118A2DC8E08E00551D57 /* BreedFilterViewController.swift */,
+				DD8B118B2DC8E08E00551D57 /* BreedFilterViewController.xib */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		DDB0A3552DC9E736003453A9 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				DD696C592DC9DFE2007B3478 /* FavoriteViewController.swift */,
+				DD696C5A2DC9DFE2007B3478 /* FavoriteViewController.xib */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		DDD9746F2DC8A8C200C179F5 = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +189,6 @@
 				DDD974AB2DC8A92400C179F5 /* Controllers */,
 				DDD9747B2DC8A8C200C179F5 /* AppDelegate.swift */,
 				DDD9747D2DC8A8C200C179F5 /* SceneDelegate.swift */,
-				DDD9747F2DC8A8C200C179F5 /* ViewController.swift */,
 				DDD974812DC8A8C200C179F5 /* Main.storyboard */,
 				DDD974842DC8A8C300C179F5 /* Assets.xcassets */,
 				DDD974862DC8A8C300C179F5 /* LaunchScreen.storyboard */,
@@ -204,16 +217,14 @@
 		DDD974AB2DC8A92400C179F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDB0A3552DC9E736003453A9 /* Favorite */,
+				DDB0A3542DC9E72C003453A9 /* Filter */,
 				DD8B11962DC8F24C00551D57 /* Detail */,
 				DDD974C72DC8ABA200C179F5 /* Home */,
 				DDD974C62DC8AB9D00C179F5 /* Register */,
 				DDD974C52DC8AB9800C179F5 /* Login */,
 				DDD974C42DC8AB9200C179F5 /* Splash */,
-				DD8B118A2DC8E08E00551D57 /* BreedFilterViewController.swift */,
-				DD8B118B2DC8E08E00551D57 /* BreedFilterViewController.xib */,
 				DD8B118E2DC8E27500551D57 /* BaseViewController.swift */,
-				DD696C592DC9DFE2007B3478 /* FavoriteViewController.swift */,
-				DD696C5A2DC9DFE2007B3478 /* FavoriteViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -269,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				DDD974B32DC8AA0200C179F5 /* SplashViewController.swift */,
-				DDD974B42DC8AA0200C179F5 /* SplashViewController.xib */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -425,7 +435,6 @@
 				DDD974882DC8A8C300C179F5 /* Base in Resources */,
 				DDD974D52DC8B01D00C179F5 /* CatViewCell.xib in Resources */,
 				DDD974832DC8A8C200C179F5 /* Base in Resources */,
-				DDD974B62DC8AA0200C179F5 /* SplashViewController.xib in Resources */,
 				DDD974C32DC8AB7300C179F5 /* HomeViewController.xib in Resources */,
 				DD696C5B2DC9DFE2007B3478 /* FavoriteViewController.xib in Resources */,
 				DD8B11922DC8E99A00551D57 /* DetailViewController.xib in Resources */,
@@ -456,7 +465,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD696C5C2DC9DFE2007B3478 /* FavoriteViewController.swift in Sources */,
-				DDD974802DC8A8C200C179F5 /* ViewController.swift in Sources */,
 				DDD9747C2DC8A8C200C179F5 /* AppDelegate.swift in Sources */,
 				DDD974E02DC8B84000C179F5 /* Cat.swift in Sources */,
 				DD8B11952DC8EB2A00551D57 /* DetailViewModel.swift in Sources */,

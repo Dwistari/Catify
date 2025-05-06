@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.overrideUserInterfaceStyle = .light
         window = UIWindow(windowScene: windowScene)
         let rootVC: UIViewController
-        rootVC =  SessionManager.shared.isLoggedIn ? HomeViewController() : LoginViewController()
+        rootVC =  SplashViewController()
         let navController = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()

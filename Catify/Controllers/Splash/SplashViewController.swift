@@ -7,23 +7,39 @@
 
 import UIKit
 
+import UIKit
+
 class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
 
-        // Do any additional setup after loading the view.
+        setupLogo()
+        navigateToNextScreen()
     }
 
+    private func setupLogo() {
+        let imageView = UIImageView(image: UIImage(named: "cat_icon_1024"))
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(imageView)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        NSLayoutConstraint.activate([
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: 200),
+            imageView.heightAnchor.constraint(equalToConstant: 200)
+        ])
     }
-    */
 
+    private func navigateToNextScreen() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            let isLoggedIn = SessionManager.shared.isLoggedIn
+            let nextVC = isLoggedIn ? HomeViewController() : LoginViewController()
+            let navController = UINavigationController(rootViewController: nextVC)
+            navController.modalPresentationStyle = .fullScreen
+            self.present(navController, animated: true, completion: nil)
+        }
+    }
 }

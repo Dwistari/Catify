@@ -53,11 +53,19 @@ class DetailViewController: BaseViewController {
     }
     
     private func bindData(data: Cat) {
-        nameLbl.text = data.breeds?.first?.name
-        originLbl.text = data.breeds?.first?.origin
-        tempramentLbl.text = data.breeds?.first?.temperament
-        descriptionLbl.text = data.breeds?.first?.description
-        
+        imgCat.layer.cornerRadius = 8
+        if let breed = data.breeds {
+            nameLbl.text = breed.first?.name
+            originLbl.text = breed.first?.origin
+            tempramentLbl.text = breed.first?.temperament
+            descriptionLbl.text = breed.first?.description
+        } else {
+            nameLbl.isHidden = true
+            originLbl.isHidden = true
+            tempramentLbl.isHidden = true
+            descriptionLbl.text =  "No available data"
+        }
+   
         if let url = URL(string: data.url) {
             imgCat.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"), options: [.retryFailed, .continueInBackground])
         }
