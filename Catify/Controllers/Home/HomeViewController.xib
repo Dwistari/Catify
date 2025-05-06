@@ -1,22 +1,67 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Catify" customModuleProvider="target">
             <connections>
+                <outlet property="btnFilter" destination="qNo-99-ZZa" id="x5u-qe-f7D"/>
+                <outlet property="tableView" destination="dCI-cy-0O1" id="AxS-IJ-WOj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dCI-cy-0O1">
+                    <rect key="frame" x="16" y="131" width="361" height="671"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNo-99-ZZa">
+                    <rect key="frame" x="285" y="75" width="92" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="O9C-Tq-mUM"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease.circle" catalog="system" title=" Filter"/>
+                    <connections>
+                        <action selector="chooseFilter:" destination="-1" eventType="touchUpInside" id="sEC-vM-NEA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-1O-JTy">
+                    <rect key="frame" x="32" y="84.666666666666671" width="108" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="tfO-1O-JTy" firstAttribute="leading" secondItem="dCI-cy-0O1" secondAttribute="leading" constant="16" id="5OU-12-6qt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dCI-cy-0O1" secondAttribute="bottom" constant="16" id="8G8-as-HR5"/>
+                <constraint firstItem="dCI-cy-0O1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="EeO-q4-9P3"/>
+                <constraint firstItem="qNo-99-ZZa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Joe-YV-Tih"/>
+                <constraint firstItem="dCI-cy-0O1" firstAttribute="top" secondItem="qNo-99-ZZa" secondAttribute="bottom" constant="16" id="Zcj-Pd-gK3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qNo-99-ZZa" secondAttribute="trailing" constant="16" id="fNS-RF-hZf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dCI-cy-0O1" secondAttribute="trailing" constant="16" id="rlN-oz-3l5"/>
+                <constraint firstItem="tfO-1O-JTy" firstAttribute="centerY" secondItem="qNo-99-ZZa" secondAttribute="centerY" id="xZI-J2-CoC"/>
+            </constraints>
+            <point key="canvasLocation" x="75.572519083969468" y="20.422535211267608"/>
         </view>
     </objects>
+    <resources>
+        <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

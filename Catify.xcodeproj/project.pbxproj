@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3CD6BD2DC9CC8900CB0285 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3CD6BC2DC9CC8900CB0285 /* Favorites.swift */; };
+		DD8B118C2DC8E08E00551D57 /* BreedFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8B118B2DC8E08E00551D57 /* BreedFilterViewController.xib */; };
+		DD8B118D2DC8E08E00551D57 /* BreedFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B118A2DC8E08E00551D57 /* BreedFilterViewController.swift */; };
+		DD8B118F2DC8E27500551D57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B118E2DC8E27500551D57 /* BaseViewController.swift */; };
+		DD8B11922DC8E99A00551D57 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8B11912DC8E99A00551D57 /* DetailViewController.xib */; };
+		DD8B11932DC8E99B00551D57 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B11902DC8E99A00551D57 /* DetailViewController.swift */; };
+		DD8B11952DC8EB2A00551D57 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B11942DC8EB2A00551D57 /* DetailViewModel.swift */; };
 		DDD9747C2DC8A8C200C179F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9747B2DC8A8C200C179F5 /* AppDelegate.swift */; };
 		DDD9747E2DC8A8C200C179F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9747D2DC8A8C200C179F5 /* SceneDelegate.swift */; };
 		DDD974802DC8A8C200C179F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD9747F2DC8A8C200C179F5 /* ViewController.swift */; };
@@ -27,6 +34,15 @@
 		DDD974CD2DC8ACB900C179F5 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDD974CB2DC8ACB900C179F5 /* UserData.xcdatamodeld */; };
 		DDD974CF2DC8AD1A00C179F5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974CE2DC8AD1A00C179F5 /* CoreDataManager.swift */; };
 		DDD974D12DC8AEC300C179F5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974D02DC8AEC300C179F5 /* SessionManager.swift */; };
+		DDD974D42DC8B01D00C179F5 /* CatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974D22DC8B01D00C179F5 /* CatViewCell.swift */; };
+		DDD974D52DC8B01D00C179F5 /* CatViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD974D32DC8B01D00C179F5 /* CatViewCell.xib */; };
+		DDD974D72DC8B43F00C179F5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974D62DC8B43F00C179F5 /* HomeViewModel.swift */; };
+		DDD974DC2DC8B4BA00C179F5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDD974DB2DC8B4BA00C179F5 /* Alamofire */; };
+		DDD974DE2DC8B4E600C179F5 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974DD2DC8B4E500C179F5 /* Endpoints.swift */; };
+		DDD974E02DC8B84000C179F5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974DF2DC8B84000C179F5 /* Cat.swift */; };
+		DDD974E22DC8B84B00C179F5 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974E12DC8B84B00C179F5 /* Breed.swift */; };
+		DDD974E42DC8BAD600C179F5 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD974E32DC8BAD600C179F5 /* CatService.swift */; };
+		DDD974E72DC8C02E00C179F5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DDD974E62DC8C02E00C179F5 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +63,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD3CD6BC2DC9CC8900CB0285 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		DD8B118A2DC8E08E00551D57 /* BreedFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedFilterViewController.swift; sourceTree = "<group>"; };
+		DD8B118B2DC8E08E00551D57 /* BreedFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedFilterViewController.xib; sourceTree = "<group>"; };
+		DD8B118E2DC8E27500551D57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DD8B11902DC8E99A00551D57 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DD8B11912DC8E99A00551D57 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		DD8B11942DC8EB2A00551D57 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		DDD974782DC8A8C200C179F5 /* Catify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD9747B2DC8A8C200C179F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDD9747D2DC8A8C200C179F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +94,13 @@
 		DDD974CC2DC8ACB900C179F5 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		DDD974CE2DC8AD1A00C179F5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DDD974D02DC8AEC300C179F5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		DDD974D22DC8B01D00C179F5 /* CatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewCell.swift; sourceTree = "<group>"; };
+		DDD974D32DC8B01D00C179F5 /* CatViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatViewCell.xib; sourceTree = "<group>"; };
+		DDD974D62DC8B43F00C179F5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DDD974DD2DC8B4E500C179F5 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		DDD974DF2DC8B84000C179F5 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		DDD974E12DC8B84B00C179F5 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		DDD974E32DC8BAD600C179F5 /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD974E72DC8C02E00C179F5 /* SDWebImage in Frameworks */,
+				DDD974DC2DC8B4BA00C179F5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD8B11962DC8F24C00551D57 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DD8B11902DC8E99A00551D57 /* DetailViewController.swift */,
+				DD8B11912DC8E99A00551D57 /* DetailViewController.xib */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
 		DDD9746F2DC8A8C200C179F5 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +146,7 @@
 				DDD974912DC8A8C300C179F5 /* CatifyTests */,
 				DDD9749B2DC8A8C300C179F5 /* CatifyUITests */,
 				DDD974792DC8A8C200C179F5 /* Products */,
+				DDD974DA2DC8B4BA00C179F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,10 +200,14 @@
 		DDD974AB2DC8A92400C179F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD8B11962DC8F24C00551D57 /* Detail */,
 				DDD974C72DC8ABA200C179F5 /* Home */,
 				DDD974C62DC8AB9D00C179F5 /* Register */,
 				DDD974C52DC8AB9800C179F5 /* Login */,
 				DDD974C42DC8AB9200C179F5 /* Splash */,
+				DD8B118A2DC8E08E00551D57 /* BreedFilterViewController.swift */,
+				DD8B118B2DC8E08E00551D57 /* BreedFilterViewController.xib */,
+				DD8B118E2DC8E27500551D57 /* BaseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,6 +215,8 @@
 		DDD974AC2DC8A92D00C179F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DDD974DF2DC8B84000C179F5 /* Cat.swift */,
+				DDD974E12DC8B84B00C179F5 /* Breed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +224,9 @@
 		DDD974AD2DC8A93500C179F5 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				DDD974DD2DC8B4E500C179F5 /* Endpoints.swift */,
+				DDD974E32DC8BAD600C179F5 /* CatService.swift */,
+				DD3CD6BC2DC9CC8900CB0285 /* Favorites.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -183,6 +234,8 @@
 		DDD974AE2DC8A94300C179F5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DDD974D62DC8B43F00C179F5 /* HomeViewModel.swift */,
+				DD8B11942DC8EB2A00551D57 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -190,6 +243,8 @@
 		DDD974AF2DC8A94F00C179F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DDD974D22DC8B01D00C179F5 /* CatViewCell.swift */,
+				DDD974D32DC8B01D00C179F5 /* CatViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +295,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DDD974DA2DC8B4BA00C179F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,6 +318,10 @@
 			dependencies = (
 			);
 			name = Catify;
+			packageProductDependencies = (
+				DDD974DB2DC8B4BA00C179F5 /* Alamofire */,
+				DDD974E62DC8C02E00C179F5 /* SDWebImage */,
+			);
 			productName = Catify;
 			productReference = DDD974782DC8A8C200C179F5 /* Catify.app */;
 			productType = "com.apple.product-type.application";
@@ -330,6 +396,7 @@
 			mainGroup = DDD9746F2DC8A8C200C179F5;
 			packageReferences = (
 				DDD974B72DC8AA9100C179F5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DDD974E52DC8BF3200C179F5 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = DDD974792DC8A8C200C179F5 /* Products */;
 			projectDirPath = "";
@@ -350,10 +417,13 @@
 				DDD974BB2DC8AAB900C179F5 /* LoginViewController.xib in Resources */,
 				DDD974852DC8A8C300C179F5 /* Assets.xcassets in Resources */,
 				DDD974882DC8A8C300C179F5 /* Base in Resources */,
+				DDD974D52DC8B01D00C179F5 /* CatViewCell.xib in Resources */,
 				DDD974832DC8A8C200C179F5 /* Base in Resources */,
 				DDD974B62DC8AA0200C179F5 /* SplashViewController.xib in Resources */,
 				DDD974C32DC8AB7300C179F5 /* HomeViewController.xib in Resources */,
+				DD8B11922DC8E99A00551D57 /* DetailViewController.xib in Resources */,
 				DDD974BF2DC8AAC700C179F5 /* RegisterViewController.xib in Resources */,
+				DD8B118C2DC8E08E00551D57 /* BreedFilterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,12 +450,23 @@
 			files = (
 				DDD974802DC8A8C200C179F5 /* ViewController.swift in Sources */,
 				DDD9747C2DC8A8C200C179F5 /* AppDelegate.swift in Sources */,
+				DDD974E02DC8B84000C179F5 /* Cat.swift in Sources */,
+				DD8B11952DC8EB2A00551D57 /* DetailViewModel.swift in Sources */,
+				DDD974D42DC8B01D00C179F5 /* CatViewCell.swift in Sources */,
 				DDD9747E2DC8A8C200C179F5 /* SceneDelegate.swift in Sources */,
+				DD8B118F2DC8E27500551D57 /* BaseViewController.swift in Sources */,
 				DDD974BE2DC8AAC700C179F5 /* RegisterViewController.swift in Sources */,
+				DDD974D72DC8B43F00C179F5 /* HomeViewModel.swift in Sources */,
+				DDD974E22DC8B84B00C179F5 /* Breed.swift in Sources */,
 				DDD974BA2DC8AAB900C179F5 /* LoginViewController.swift in Sources */,
+				DD8B11932DC8E99B00551D57 /* DetailViewController.swift in Sources */,
+				DD8B118D2DC8E08E00551D57 /* BreedFilterViewController.swift in Sources */,
 				DDD974C22DC8AB7300C179F5 /* HomeViewController.swift in Sources */,
 				DDD974CF2DC8AD1A00C179F5 /* CoreDataManager.swift in Sources */,
+				DDD974DE2DC8B4E600C179F5 /* Endpoints.swift in Sources */,
+				DDD974E42DC8BAD600C179F5 /* CatService.swift in Sources */,
 				DDD974CD2DC8ACB900C179F5 /* UserData.xcdatamodeld in Sources */,
+				DD3CD6BD2DC9CC8900CB0285 /* Favorites.swift in Sources */,
 				DDD974D12DC8AEC300C179F5 /* SessionManager.swift in Sources */,
 				DDD974B52DC8AA0200C179F5 /* SplashViewController.swift in Sources */,
 			);
@@ -744,7 +825,28 @@
 				minimumVersion = 5.10.2;
 			};
 		};
+		DDD974E52DC8BF3200C179F5 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDD974DB2DC8B4BA00C179F5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDD974B72DC8AA9100C179F5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DDD974E62DC8C02E00C179F5 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDD974E52DC8BF3200C179F5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DDD974CB2DC8ACB900C179F5 /* UserData.xcdatamodeld */ = {
