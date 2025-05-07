@@ -25,8 +25,6 @@ class DetailViewModel {
             case .success(let cat):
                 self?.cat = cat
                 self?.onSuccessFetchDetail?()
-                
-                print("onSuccessFetchDetail", cat)
             case .failure(let error):
                 self?.onError?(error.localizedDescription)
             }

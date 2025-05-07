@@ -38,8 +38,8 @@ class DetailViewController: BaseViewController {
     
     private func loadData() {
         self.showLoading()
-        viewModel.fetchDetail(id: cat.id)
         bindViewModel()
+        viewModel.fetchDetail(id: cat.id)
     }
     
     private func bindViewModel() {
@@ -48,6 +48,14 @@ class DetailViewController: BaseViewController {
             DispatchQueue.main.async {
                 self.hideLoading()
                 self.bindData(data: data)
+            }
+        }
+        
+        viewModel.onError = { [weak self] msg in
+            guard let self = self else {return}
+            DispatchQueue.main.async {
+                self.hideLoading()
+                self.showToastError(message: msg)
             }
         }
     }

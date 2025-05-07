@@ -69,9 +69,10 @@ class HomeViewController: BaseViewController {
             }
         }
 
-        viewModel.onError = { errorMessage in
+        viewModel.onError = { [weak self] msg in
+            guard let self = self else {return}
             self.hideLoading()
-            print("Error: \(errorMessage)")
+            self.showToastError(message: msg)
         }
         favoriteCats = CoreDataManager.shared.fetchFavorites()
     }
