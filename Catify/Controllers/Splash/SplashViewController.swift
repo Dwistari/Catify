@@ -14,7 +14,6 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-
         setupLogo()
         navigateToNextScreen()
     }
@@ -34,7 +33,8 @@ class SplashViewController: UIViewController {
     }
 
     private func navigateToNextScreen() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            guard let self = self else { return }
             let isLoggedIn = SessionManager.shared.isLoggedIn
             let nextVC = isLoggedIn ? HomeViewController() : LoginViewController()
             let navController = UINavigationController(rootViewController: nextVC)

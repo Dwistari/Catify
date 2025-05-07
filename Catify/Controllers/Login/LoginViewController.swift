@@ -30,7 +30,6 @@ class LoginViewController: UIViewController {
         if CoreDataManager.shared.loginUser(username: username, password: password) != nil {
             showLoginSuccessAndNavigate()
             SessionManager.shared.login(username: username)
-//            startSessionTimer()
         } else {
             let alert = UIAlertController(title: "Error", message: "Invalid username or password", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
