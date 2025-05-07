@@ -17,6 +17,5 @@ struct Endpoints {
         static func details(id: String) -> String {
             return "\(baseURL)/images/\(id)"
         }
-        static let favorite = "\(baseURL)/favourites"
     }
 }

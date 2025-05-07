@@ -17,8 +17,13 @@ protocol CatServiceProtocol {
 
 class CatService: CatServiceProtocol {
     
-    private let apiKey = "live_3oGTXh1kffzdAk3VZB9KHlZdv0TDoxpYve3eDhCbyftzLKbB8HSvefQfmTMH4ZeF"
-
+    private var apiKey: String {
+        guard let key = Bundle.main.object(forInfoDictionaryKey: "APIKey") as? String else {
+            fatalError("API key is missing in Info.plist")
+        }
+        return key
+    }
+    
     func fetchCats(page: Int, breed: String, completion: @escaping (Result<[Cat], AFError>) -> Void) {
         let headers: HTTPHeaders = [
             "x-api-key": apiKey

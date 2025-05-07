@@ -62,8 +62,8 @@ class DetailViewController: BaseViewController {
         } else {
             nameLbl.isHidden = true
             originLbl.isHidden = true
-            tempramentLbl.isHidden = true
-            descriptionLbl.text =  "No available data"
+            descriptionLbl.isHidden = true
+            tempramentLbl.text =  "No available data"
         }
    
         if let url = URL(string: data.url) {
