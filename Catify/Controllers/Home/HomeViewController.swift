@@ -51,10 +51,12 @@ class HomeViewController: BaseViewController {
     private func bindViewModel() {
         viewModel.onSuccessFetchCats = { [weak self] in
             DispatchQueue.main.async {
-                guard let self = self else {return}
+                guard let self = self else { return }
                 self.cats = self.viewModel.cats
-                self.hideLoading()
                 self.tableView.reloadData()
+                self.isLoading = false
+                self.tableView.tableFooterView = nil
+                self.hideLoading()
             }
         }
         
@@ -141,7 +143,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let contentHeight = scrollView.contentSize.height
         let frameHeight = scrollView.frame.size.height
         
-        if offsetY > contentHeight - frameHeight * 1.5 && !isLoading {
+        if offsetY > contentHeight - frameHeight * 1.5 && !isLoading && viewModel.hasMoreData {
             isLoading = true
             self.tableView.tableFooterView = createTableFooterSpinner()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in

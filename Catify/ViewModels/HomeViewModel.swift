@@ -19,27 +19,30 @@ class HomeViewModel {
     var onError: ((String) -> Void)?
 
     var page = 0
+    var hasMoreData = true
 
     init(service: CatServiceProtocol = CatService()) {
         self.service = service
     }
 
     func fetchCats() {
+        guard hasMoreData else { return }
         service.fetchCats(page: page,breed: selectedBreed) { [weak self] result in
             guard let self = self else {return}
             switch result {
-            case .success(let cats):
-                if self.page > 0 {
-                    self.cats.append(contentsOf: cats)
-                    print("self.cats1",self.cats.count)
-
+            case .success(let newCats):
+                if newCats.isEmpty {
+                    self.hasMoreData = false
+                    self.onSuccessFetchCats?()
                 } else {
-                    self.cats = cats
-                    print("self.cats2",self.cats.count)
-
+                    if self.page > 0 {
+                        self.cats.append(contentsOf: newCats)
+                    } else {
+                        self.cats = newCats
+                    }
+                    self.page += 1
+                    self.onSuccessFetchCats?()
                 }
-                
-                self.onSuccessFetchCats?()
             case .failure(let error):
                 self.onError?(error.localizedDescription)
             }
@@ -61,6 +64,7 @@ class HomeViewModel {
     func filterByBreed(breed: String) {
         selectedBreed = breed
         page = 0
+        hasMoreData = true
         fetchCats()
     }
 }
